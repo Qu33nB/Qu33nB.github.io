@@ -58,6 +58,32 @@ img {
 
 strong { font-weight: var(--fw-bold) }
 
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 2px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .8em 1.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    border-radius: 14px;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
 /* Typography */
 
 h1,
@@ -151,5 +177,76 @@ nav {
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em);
+    }
+}
+
+/* My services section */
+
+.my_services {
+    background-color: var(--clr-dark);
+    background-image: url(./img/pexels-danny-meneses-943096.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background-color: var(--clr-light);
+    opacity: 0.5;
+}
+
+.services {
+    margin-bottom: 3em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto 3em auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
+/* About Me */
+
+.about_me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .about_me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+    }
+
+    .section__title--about,
+    .section__subtitle--about{
+        grid-column: 1;
+    }
+    
+    .about_me__img {
+        grid-row: 1/-1;
+        grid-column: 2/;
     }
 }
