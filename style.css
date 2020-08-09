@@ -251,6 +251,16 @@ nav {
     .section__title--about{
         grid-area: title;
     }
+    .section__subtitle--about{
+        grid-column: 1/-1;
+        grid-row: 2;
+        position: relative;
+        left: -2em;
+        width: calc(100% + 4em);
+        padding-left: 2em;
+        padding-right: calc(200px + 2em);
+        z-index: -1;
+    }
 
     .about-me__img {
         grid-area: img;
