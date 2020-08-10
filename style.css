@@ -255,14 +255,23 @@ nav {
         grid-column: 1/-1;
         grid-row: 2;
         position: relative;
-        left: -2em;
-        width: calc(100% + 4em);
-        padding-left: 2em;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
         padding-right: calc(200px + 2em);
         z-index: -1;
     }
 
     .about-me__img {
         grid-area: img;
+        position: relative;
     }
+}
+
+/* My Work */
+
+.my-work {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
 }
